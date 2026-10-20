@@ -1,0 +1,15 @@
+{
+  "name": "bookmark-inbox",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A local Chrome new-tab reading inbox backed by native bookmarks.",
+  "scripts": {
+    "test": "node --test --test-concurrency=1 tests/*.test.js",
+    "test:unit": "node --test tests/bookmarks.test.js",
+    "test:browser": "node --test tests/browser.test.js"
+  },
+  "devDependencies": {
+    "playwright": "1.58.2"
+  }
+}

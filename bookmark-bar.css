@@ -1,0 +1,20 @@
+.bookmark-bar { position: sticky; top: 0; z-index: 20; display: flex; gap: 4px; align-items: center; width: 100%; height: 36px; padding: 3px 10px; border-bottom: 1px solid var(--line); background: var(--surface); }
+.bookmark-bar-items { display: flex; align-items: center; flex: 1; min-width: 0; gap: 4px; overflow: hidden; }
+.bar-entry { display: flex; align-items: center; flex: 0 0 auto; gap: 6px; min-width: 0; max-width: 190px; height: 28px; padding: 4px 7px; border: 0; border-radius: 5px; background: none; color: var(--text); font: inherit; font-size: 12px; text-align: left; text-decoration: none; cursor: default; }
+.bar-entry:hover, .bar-entry[aria-expanded="true"], .bar-menu-back:hover { background: var(--hover); }
+.bar-entry > svg { flex: 0 0 16px; width: 16px; height: 16px; color: var(--muted); }
+.bar-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bar-icon { position: relative; flex: 0 0 16px; width: 16px; height: 16px; color: var(--muted); }
+.bar-icon > svg { width: 16px; height: 16px; }
+.bar-entry[aria-disabled="true"] { color: var(--muted); cursor: default; }
+.bar-overflow { justify-content: center; flex: 0 0 30px; font-size: 22px; }
+.bookmark-menu { position: fixed; z-index: 30; width: min(380px, calc(100vw - 16px)); padding: 6px; overflow-y: auto; overscroll-behavior: contain; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); box-shadow: 0 8px 32px #0003; }
+.bookmark-menu .bar-entry { width: 100%; max-width: none; height: auto; min-height: 34px; }
+.bookmark-menu .bar-label { flex: 1; line-height: 1.6; }
+.bar-folder-arrow { margin-left: auto; color: var(--muted); font-size: 19px; }
+.bar-menu-heading { padding: 8px 7px 10px; color: var(--muted); font-size: 11px; border-bottom: 1px solid var(--line); margin-bottom: 4px; overflow-wrap: anywhere; }
+.bar-menu-back { width: 100%; padding: 7px; border: 0; border-radius: 5px; background: none; color: var(--text); text-align: left; font: inherit; font-size: 12px; cursor: default; }
+.bar-menu-empty { padding: 14px 7px; margin: 0; color: var(--muted); font-size: 12px; }
+.bar-entry.drop-target { outline: 2px solid var(--focus); outline-offset: -2px; background: var(--accent-soft); }
+.bookmark-bar-error { position: absolute; top: 100%; right: 10px; max-width: calc(100vw - 20px); padding: 10px 14px; border: 1px solid var(--line); border-radius: 7px; background: var(--surface); color: var(--text); font-size: 12px; box-shadow: 0 4px 18px #0002; }
+.bar-entry:focus-visible { outline-offset: -2px; }
